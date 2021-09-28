@@ -19,7 +19,7 @@ Future<Map> _getGifs() async {
 
   if (_search == null || _search.isEmpty)
     response = await http.get(Uri.parse(
-        'https://api.giphy.com/v1/gifs/trending?api_key=5W4DVPM2cNQsMNSugRjht7yPEPVXuBW6&limit=25&rating=g'));
+        'https://api.giphy.com/v1/gifs/trending?api_key=5W4DVPM2cNQsMNSugRjht7yPEPVXuBW6&limit=20&rating=g'));
   else
     response = await http.get(Uri.parse(
         'https://api.giphy.com/v1/gifs/search?api_key=5W4DVPM2cNQsMNSugRjht7yPEPVXuBW6&q=$_search&limit=19&offset=$_offset&rating=g&lang=en'));
